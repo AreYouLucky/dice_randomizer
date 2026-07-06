@@ -1,11 +1,9 @@
+//ignore just an advance animation example
+
 import 'package:flutter/material.dart';
 
 class AnimatedDie extends StatelessWidget {
-  const AnimatedDie({
-    super.key,
-    required this.value,
-    this.size = 150,
-  });
+  const AnimatedDie({super.key, required this.value, this.size = 150});
 
   final int value;
   final double size;
@@ -24,10 +22,7 @@ class AnimatedDie extends StatelessWidget {
 
         return RotationTransition(
           turns: rotateAnimation,
-          child: ScaleTransition(
-            scale: animation,
-            child: child,
-          ),
+          child: ScaleTransition(scale: animation, child: child),
         );
       },
       child: Image.asset(
