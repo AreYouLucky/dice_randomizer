@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:tasks_organizer/components/animated_die.dart';
+
 final randomizer = Random();
 
 class DiceRoller extends StatefulWidget {
@@ -30,8 +32,8 @@ class _DiceRollerState extends State<DiceRoller> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/dice-$dice1.png', width: 150),
-            Image.asset('assets/images/dice-$dice2.png', width: 150),
+            AnimatedDie(value: dice1),
+            AnimatedDie(value: dice2),
           ],
         ),
         TextButton(
